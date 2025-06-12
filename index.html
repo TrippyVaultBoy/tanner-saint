@@ -19,55 +19,158 @@
                     <h1>I'm a full stack web developer.</h1>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-outline-danger">My Stuff</button>
+                    <a href="#about"><button class="btn btn-outline-danger">Get to know me</button></a>
                 </div>
             </div>
 
             <!-- HEADER -->
-            <header class="w-100" style="background-color: var(--accent-color);">
+            <header class="sticky-top w-100" style="background-color: var(--accent-color);">
                 <div class="container primaryColor d-flex justify-content-center align-items-center py-3">
                     <nav class="d-flex gap-5">
-                        <a class="text-decoration-none h5 my-auto">About</a>
-                        <a class="text-decoration-none h5 my-auto">Projects</a>
-                        <a class="text-decoration-none h5 my-auto">Contact</a>
+                        <a href="#about" class="text-decoration-none h5 my-auto">About</a>
+                        <a href="#projects" class="text-decoration-none h5 my-auto">Projects</a>
+                        <a href="#contact" class="text-decoration-none h5 my-auto">Contact</a>
                     </nav>
                 </div>
             </header>
 
             <!-- ABOUT -->
-            <div class="container d-flex flex-column">
-                <div class="primaryColor d-flex justify-content-center pt-4">
-                    <p class="h1">About Me</p>
-                </div>
-                <div class="d-flex flex-row gap-3">
-                    <div class="w-50 my-auto">
-                        <img src="./images/headshot.JPG" class="img-fluid">
+            <div class="container d-flex flex-column align" id="about" style="min-height: 100vh;">
+                <div class="d-flex flex-column  my-auto">
+                    <div class="primaryColor d-flex justify-content-center mb-4">
+                        <p class="h1">About Me</p>
                     </div>
-                    <div class="w-50 secondaryColor my-auto">
-                        <p>I’m a full stack developer with a passion for learning new skills and bringing ideas to life. I build functional, good-looking websites with a focus on responsive, user-friendly design.
+                    <div class="d-flex flex-row gap-3">
+                        <div class="w-50 my-auto">
+                            <img src="./images/headshot.JPG" class="img-fluid">
+                        </div>
+                        <div class="w-50 secondaryColor my-auto">
+                            <p>I’m a full stack developer with a passion for learning new skills and bringing ideas to life. I build functional, good-looking websites with a focus on responsive, user-friendly design.
 
-                            What drives me is the balance between creativity and logical problem-solving—it’s where I do my best work.
+                                What drives me is the balance between creativity and logical problem-solving—it’s where I do my best work.
 
-                            When I’m not building websites, you can usually find me watching Star Wars or playing the latest video games.</p>
+                                When I’m not building websites, you can usually find me watching Star Wars or playing the latest video games.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- PORTFOLIO -->
-            <div>
+            <!-- PROJECTS -->
+            <div class="container d-flex flex-column" id="projects" style="min-height: 100vh;">
+                
+                <div class="d-flex flex-column my-auto">
+                    <div class="primaryColor d-flex justify-content-center pt-4 mb-4">
+                        <p class="h1">My Projects</p>
+                    </div>
+                    
+                    <div class="d-flex flex-column"> 
+                        <!-- GALAXY NEWS NETWORK -->
+                        <div class="d-flex flex-row gap-4 pb-5">
+                            <div class="w-50">
+                                <img src="./images/gnn.png" class="img-fluid">
+                            </div>
+                            <div class="w-50 d-flex flex-column my-auto">
+                                <div class="primaryColor">
+                                    <p>Galaxy News Network</p>
+                                </div>
+                                <div class="secondaryColor">
+                                    <p>Fallout-themed news website featuring an integrated live music player. Built with HTML, CSS, Javascript, Bootstrap and Responsive Design during a two week sprint</p>
+                                </div>
+                                <div>
+                                    <a href="https://trippyvaultboy.github.io/galaxy-news-radio/">Live Site</a>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="https://github.com/TrippyVaultBoy/galaxy-news-radio">GitHub Page</a>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- CROSSFIRE SURPLUS YARDS -->
+                        <div class="d-flex flex-row-reverse gap-4 pb-5">
+                            <div class="w-50">
+                                <img src="./images/surplus_yards.png" class="img-fluid">
+                            </div>
+                            <div class="w-50 d-flex flex-column my-auto">
+                                <div class="primaryColor">
+                                    <p>Crossfire Surplus Yards</p>
+                                </div>
+                                <div class="secondaryColor">
+                                    <p>A dealership style website themed around Star Wars starships. Built with HTML, CSS, Boostrap and Responsive Design during a two week sprint</p>
+                                </div>
+                                <div>
+                                    <a href="https://trippyvaultboy.github.io/atlas-bootstrap/">Live Site</a>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="https://github.com/TrippyVaultBoy/atlas-bootstrap">GitHub Page</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VAULT-TEC INDUSTRIES -->
+                        <div class="d-flex flex-row gap-4 pb-5">
+                            <div class="w-50">
+                                <img src="./images/vault_tec.png" class="img-fluid">
+                            </div>
+                            <div class="w-50 d-flex flex-column my-auto">
+                                <div class="primaryColor">
+                                    <p>VAULT-TEC Industries</p>
+                                </div>
+                                <div class="secondaryColor">
+                                    <p>Created a fictional corporate website for Vault-Tec, inspired by the Fallout game series. Built with HTML, CSS, Javascript, Leaflet.js</p>
+                                </div>
+                                <div>
+                                    <a href="https://trippyvaultboy.github.io/vault_tec_website/">Live Site</a>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="https://github.com/TrippyVaultBoy/vault_tec_website">GitHub Page</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
             </div>
 
             <!-- CONTACT -->
-            <div>
+            <div class="primaryColor container d-flex flex-column justify-content-center align-content-center" id="contact" style="max-width: 600px; min-height: 100vh;">
+                <h2 class="text-center mb-4">Contact Me</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    
+                    <input type="hidden" name="access_key" value="43582a54-cdbb-46ff-8145-e83bcf233314">
 
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" name="message" required></textarea>
+                    </div>
+
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <button type="submit" class="btn btn-danger w-100 mb-3">Send Message</button>
+                </form>
             </div>
 
         </main>
         
         <!-- FOOTER -->
-        <footer>
+        <footer class="text-center text-lg-start" style="background-color: var(--accent-color);">
+            <div class="container d-flex justify-content-center py-5">
+                <a href="https://linkedin.com/in/tannersaint" target="_blank" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+                    <img src="./images/linkedin.png" class="img-fluid" alt="LinkedIn" style="width: 30px; height: 30px;">
+                </a>
 
+                <a href="https://github.com/TrippyVaultBoy" target="_blank" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+                    <img src="./images/github-logo.png" class="img-fluid" alt="GitHub" style="width: 30px; height: 30px;">
+                </a>
+            </div>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
