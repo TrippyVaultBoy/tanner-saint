@@ -8,14 +8,17 @@
         <link rel="icon" href="" type="image/x-icon">
         <link rel="stylesheet" href="./styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="./scripts.js"></script>
     </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50" tabindex="0">
         
         <!-- MAIN -->
         <main class="backgroundColor">
             <div class="container secondaryColor d-flex flex-column justify-content-center align-content-center" style="min-height: 100vh;">
                 <div class="text-center">
-                    <h1>Hello, I'm <Span class="primaryColor">Tanner.</Span></h1>
+                    <div class="typewriter h1">
+                        <span id="text"></span><span class="cursor">&nbsp;</span>
+                    </div>
                     <h1>I'm a full stack web developer.</h1>
                 </div>
                 <div class="text-center">
@@ -24,12 +27,14 @@
             </div>
 
             <!-- HEADER -->
-            <header class="sticky-top w-100" style="background-color: var(--accent-color);">
-                <div class="container primaryColor d-flex justify-content-center align-items-center py-3">
-                    <nav class="d-flex gap-5">
-                        <a href="#about" class="text-decoration-none h5 my-auto">About</a>
-                        <a href="#projects" class="text-decoration-none h5 my-auto">Projects</a>
-                        <a href="#contact" class="text-decoration-none h5 my-auto">Contact</a>
+            <header class="sticky-top" style="background-color: var(--accent-color);">
+                <div class="container w-100 d-flex primaryColor d-flex py-2">
+                    <nav class="navbar d-flex justify-content-around gap-5 mx-auto" id="navbar">
+                        <ul class="nav nav-pills gap-3">
+                            <li class="nav-item list-unstyled"><a href="#about" class="nav-link text-decoration-none h5 my-auto">About</a></li>
+                            <li class="nav-item list-unstyled"><a href="#projects" class="nav-link text-decoration-none h5 my-auto">Projects</a></li>
+                            <li class="nav-item list-unstyled"><a href="#contact" class="nav-link text-decoration-none h5 my-auto">Contacts</a></li>
+                        </ul>
                     </nav>
                 </div>
             </header>
@@ -37,14 +42,14 @@
             <!-- ABOUT -->
             <div class="container d-flex flex-column align" id="about" style="min-height: 100vh;">
                 <div class="d-flex flex-column  my-auto">
-                    <div class="primaryColor d-flex justify-content-center mb-4">
+                    <div class="primaryColor d-flex justify-content-center mb-5">
                         <p class="h1">About Me</p>
                     </div>
-                    <div class="d-flex flex-row gap-3">
-                        <div class="w-50 my-auto">
-                            <img src="./images/headshot.JPG" class="img-fluid">
+                    <div class="d-flex flex-column flex-md-row justify-content-center mx-auto gap-4">
+                        <div class="w-25 mx-auto">
+                            <img src="./images/tanner-saint.jpg" class="img-fluid rounded-circle">
                         </div>
-                        <div class="w-50 secondaryColor my-auto">
+                        <div class="w-50 secondaryColor text-center align-content-center mx-auto" style="font-size: large;">
                             <p>I’m a full stack developer with a passion for learning new skills and bringing ideas to life. I build functional, good-looking websites with a focus on responsive, user-friendly design.
 
                                 What drives me is the balance between creativity and logical problem-solving—it’s where I do my best work.
@@ -59,70 +64,85 @@
             <div class="container d-flex flex-column" id="projects" style="min-height: 100vh;">
                 
                 <div class="d-flex flex-column my-auto">
-                    <div class="primaryColor d-flex justify-content-center pt-4 mb-4">
+                    <div class="primaryColor d-flex justify-content-center pt-4 mb-5">
                         <p class="h1">My Projects</p>
                     </div>
                     
                     <div class="d-flex flex-column"> 
                         <!-- GALAXY NEWS NETWORK -->
-                        <div class="d-flex flex-row gap-4 pb-5">
-                            <div class="w-50">
+                        <div class="d-flex flex-column flex-md-row gap-4 mb-5">
+                            <div class="w-50 mx-auto my-md-auto">
                                 <img src="./images/gnn.png" class="img-fluid">
                             </div>
-                            <div class="w-50 d-flex flex-column my-auto">
+                            <div class="w-50 gap-2 d-flex flex-column mx-auto my-lg-auto">
                                 <div class="primaryColor">
-                                    <p>Galaxy News Network</p>
+                                    <p class="my-auto h4">Galaxy News Network</p>
                                 </div>
+                                <ul class="d-flex flex-row flex-wrap list-group gap-2">
+                                    <li class="badge rounded-pill bg-primary">HTML</li>
+                                    <li class="badge rounded-pill bg-info">CSS</li>
+                                    <li class="badge rounded-pill bg-success">Javascript</li>
+                                    <li class="badge rounded-pill bg-secondary">Boostrap</li>
+                                </ul>
                                 <div class="secondaryColor">
-                                    <p>Fallout-themed news website featuring an integrated live music player. Built with HTML, CSS, Javascript, Bootstrap and Responsive Design during a two week sprint</p>
+                                    <p class="my-auto">Exercitation ad ea aute laboris occaecat voluptate cupidatat ea esse do exercitation non laborum anim. Ea magna aliquip aliquip magna adipisicing irure do sit ipsum enim.</p>
                                 </div>
-                                <div>
-                                    <a href="https://trippyvaultboy.github.io/galaxy-news-radio/">Live Site</a>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="https://github.com/TrippyVaultBoy/galaxy-news-radio">GitHub Page</a>
+                                <div class="d-flex flex-column justify-content-around gap-2 my-2">
+                                    <a href="https://trippyvaultboy.github.io/galaxy-news-radio/" class="w-75 btn btn-info" role="button">Live site</a>
+                                    <a href="https://github.com/TrippyVaultBoy/galaxy-news-radio" class="w-75 btn btn-info" role="button">GitHub link</a>
                                 </div>
                             </div>
                         </div>
 
                         <!-- CROSSFIRE SURPLUS YARDS -->
-                        <div class="d-flex flex-row-reverse gap-4 pb-5">
-                            <div class="w-50">
+                        <div class="d-flex flex-column flex-md-row-reverse gap-4 mb-5">
+                            <div class="w-50 mx-auto my-md-auto">
                                 <img src="./images/surplus_yards.png" class="img-fluid">
                             </div>
-                            <div class="w-50 d-flex flex-column my-auto">
-                                <div class="primaryColor">
-                                    <p>Crossfire Surplus Yards</p>
+                            <div class="w-50 gap-2 d-flex flex-column mx-auto my-lg-auto">
+                                <div class="primaryColor text-center text-md-end">
+                                    <p class="my-auto h4">Crossfire Surplus Yards</p>
                                 </div>
-                                <div class="secondaryColor">
-                                    <p>A dealership style website themed around Star Wars starships. Built with HTML, CSS, Boostrap and Responsive Design during a two week sprint</p>
+                                <ul class="d-flex flex-row justify-content-center justify-content-md-end list-group gap-2">
+                                    <li class="badge rounded-pill bg-primary">HTML</li>
+                                    <li class="badge rounded-pill bg-info">CSS</li>
+                                    <li class="badge rounded-pill bg-secondary">Boostrap</li>
+                                </ul>
+                                <div class="secondaryColor text-center text-md-end">
+                                    <p class="my-auto">Nulla aute et irure amet ad consectetur eu sint laboris velit elit id ullamco. Ipsum excepteur mollit aute ullamco nulla mollit ut. Excepteur laborum ipsum ex incididunt.</p>
                                 </div>
-                                <div>
-                                    <a href="https://trippyvaultboy.github.io/atlas-bootstrap/">Live Site</a>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="https://github.com/TrippyVaultBoy/atlas-bootstrap">GitHub Page</a>
+                                <div class="d-flex flex-column my-2">
+                                    <div class="d-flex flex-column gap-2 my-2">
+                                        <a href="https://trippyvaultboy.github.io/atlas-bootstrap/" class="w-75 align-self-end btn btn-info" role="button">Live site</a>
+                                        <a href="https://github.com/TrippyVaultBoy/atlas-bootstrap" class="w-75 align-self-end btn btn-info" role="button">GitHub link</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- VAULT-TEC INDUSTRIES -->
-                        <div class="d-flex flex-row gap-4 pb-5">
-                            <div class="w-50">
+                        <div class="d-flex flex-column flex-md-row gap-4 mb-5">
+                            <div class="w-50 mx-auto my-md-auto">
                                 <img src="./images/vault_tec.png" class="img-fluid">
                             </div>
-                            <div class="w-50 d-flex flex-column my-auto">
+                            <div class="w-50 gap-2 d-flex flex-column mx-auto my-lg-auto">
                                 <div class="primaryColor">
-                                    <p>VAULT-TEC Industries</p>
+                                    <p class="my-auto h4">Vault-Tec Industries</p>
                                 </div>
+                                <ul class="d-flex flex-row list-group gap-2">
+                                    <li class="badge rounded-pill bg-primary">HTML</li>
+                                    <li class="badge rounded-pill bg-info">CSS</li>
+                                    <li class="badge rounded-pill bg-success">Javascript</li>
+                                    <li class="badge rounded-pill bg-dark">Leaflet.js</li>
+                                </ul>
                                 <div class="secondaryColor">
-                                    <p>Created a fictional corporate website for Vault-Tec, inspired by the Fallout game series. Built with HTML, CSS, Javascript, Leaflet.js</p>
+                                    <p class="my-auto">Exercitation fugiat velit esse ea elit dolor laboris sint. Aliqua nulla sint minim fugiat duis voluptate culpa ipsum cillum ullamco. Officia nisi quis do anim pariatur aliquip proident.</p>
                                 </div>
-                                <div>
-                                    <a href="https://trippyvaultboy.github.io/vault_tec_website/">Live Site</a>
-                                </div>
-                                <div class="mt-3">
-                                    <a href="https://github.com/TrippyVaultBoy/vault_tec_website">GitHub Page</a>
+                                <div class="d-flex flex-column justify-content-around my-2">
+                                    <div class="d-flex flex-column justify-content-around gap-2 my-2">
+                                        <a href="https://trippyvaultboy.github.io/vault_tec_website/" class="w-75 btn btn-info" role="button">Live site</a>
+                                        <a href="https://github.com/TrippyVaultBoy/vault_tec_website" class="w-75 btn btn-info" role="button">GitHub link</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +154,7 @@
 
             <!-- CONTACT -->
             <div class="primaryColor container d-flex flex-column justify-content-center align-content-center" id="contact" style="max-width: 600px; min-height: 100vh;">
-                <h2 class="text-center mb-4">Contact Me</h2>
+                <h2 class="text-center mb-5">Contact Me</h2>
                 <form action="https://api.web3forms.com/submit" method="POST">
                     
                     <input type="hidden" name="access_key" value="43582a54-cdbb-46ff-8145-e83bcf233314">
